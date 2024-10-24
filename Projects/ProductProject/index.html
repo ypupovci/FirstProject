@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon/logo.png">
+    <title>Product Shop</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <body>
+        <div class="login">
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button id="presstologin">Login</button>
+        </div>
+        <div class="header">
+            <div class="tools">
+                <div class="left-tools"> 
+                    <div class="search-product">
+                        <label for="search">Search</label>
+                        <input type="text" id="search" placeholder="search product">
+                    </div>
+                    <div class="filter-product">
+                        <label for="select-category">Category</label>
+                        <select id="select-category">
+                            <option value="">All Categories</option>
+                            <option value="electronic">Electronic</option>
+                            <option value="home">Home</option>
+                            <option value="pc">PC</option>
+                            <option value="music">Music</option>
+                            <option value="food">Food</option>
+                        </select>
+                    </div>
+                    <div class="filter-product">
+                        <label for="select-price">Sort Price & Rating</label>
+                        <select id="select-price">
+                            <option value="htl">High to Low</option>
+                            <option value="lth">Low to High</option>
+                            <option value="rtg">Rating</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="filter-product">
+                    <label for="range">Sort Price Value</label>
+                    <div class="range-slider">
+                        <input type="range" id="range" min="0" max="5000" value="5000">
+                        <div class="values">
+                            <div class="value-unit">
+                                <label for="max">Max</label>
+                                <span id="max">5000</span>
+                            </div>
+                            <div class="value-unit">
+                                <label for="min">Min</label>
+                                <span id="min">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container"></div>
+        <div id="pagination"></div>
+        <div id="checkout-sidebar" class="checkout-sidebar hidden">
+            <div class="checkout-header">
+                <h2>Shopping Cart</h2>
+                <span id="close-checkout" class="close-checkout">&times;</span>
+            </div>
+            <div id="checkout-items" class="checkout-items"></div>
+            <div class="checkout-footer">
+                <div class="checkout-total">
+                    <span>Subtotal:</span>
+                    <span id="checkout-total-price">0.00€</span>
+                </div>
+                <button id="checkout-confirm">Proceed to Checkout</button>
+                <button id="checkout-cancel">Cancel</button>
+            </div>
+        </div>
+    
+        <script src="./script/script.js"></script>
+</body>
+</html>
